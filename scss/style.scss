@@ -1,0 +1,308 @@
+@charset "UTF-8";
+$primary:#37447E;
+$secondary:#091133;
+$button: #111B47;
+$bg1:#f0f0f0;
+$bg2:#e7ecff;
+$footfont:#939EA4;
+
+*{
+    box-sizing:border-box;
+    font-size:1.2rem;
+}
+html {
+    scroll-behavior: smooth;
+    font-size:62.5%;
+}
+body {
+    width:100%;
+    height:100%;
+    margin:0;
+    background-image: url(/assets/headbackground.svg), url(/assets/footbackground.svg);
+    background-position: top, bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto 30%, 100% 25%;
+}
+a {
+    color:black;
+    text-decoration: none;
+    width:fit-content;
+}
+header {
+    width: 90%;
+    margin: 1rem auto;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    .navCont {
+      display:none;
+    }
+}
+.navCollapse {
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    a {
+        display:inline-block;
+        margin:1rem 0;
+        text-decoration: none;
+    }
+}
+.navLinks {
+    display:none;
+}
+.logo {
+    color:$primary;
+    font-weight: bold;
+    font-size:1.8rem;
+    text-decoration: none;
+}
+
+.purchaseButton {
+    height: fit-content;
+    display:inline-block;
+    background-color:$button;
+    color:white !important;
+    border:1px solid $button;
+    border-radius:2px;
+    padding:.5rem 1rem;
+}
+.hero {
+    width:90%;
+    margin: 0 auto;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    .heroContent {
+        margin-top:5rem;
+        width:90%;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        h1 {
+            font-size:2rem;
+        }
+        .learnMoreButton {
+            border:1px solid $secondary;
+            color:$secondary;
+            padding:.5rem 1rem;
+            margin-left:1rem;
+        }
+    }
+    img {
+        width:40%;
+        max-width: 35rem;
+        display:none;
+    }
+}
+#about {
+    width:90%;
+    margin: 7rem auto;
+    display:flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-around;
+    .aboutSection {
+        margin-top:1rem;
+        width:80%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        div {
+            display:flex;
+            margin-top:1rem;
+            p {
+                display:flex;
+                flex-direction: column;
+                margin:0 .5rem;
+                span {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    img {
+        width:50%;
+        max-width: 40rem;
+    }
+}
+.features {
+    width:90%;
+    margin: 0 auto;
+    .featBox {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        img {
+            width:40%;
+            max-width: 30rem;
+        }
+        p {
+            width:80%;
+            display:flex;
+            flex-direction: column;
+            span {
+                font-size:1.5rem;
+                font-weight: bold;
+                margin-bottom:.5rem;
+            }
+            a {
+                margin-top:1.5rem;
+            }
+        }
+    }
+}
+.purchase {
+    width:90%;
+    margin: 10rem auto 5rem auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+        width:80%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        margin:2rem 0;
+        span {
+            font-size:2rem;
+            font-weight: bold;
+            color:$secondary;
+            margin-bottom: .5rem;
+        }
+    }
+    .lastBox {
+        font-size:1rem;
+        a {
+            margin:.5rem 0;
+        }
+    }
+}
+
+footer {
+    width:100%;
+    margin:0 auto;
+    padding:3rem 0;
+    background-color: $bg2;
+    color:$footfont;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .footTop{
+        width:90%;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $footfont;
+        p,a {
+            font-size:1rem;
+        }
+    }
+    .footBottom {
+        width:90%;
+        margin:2rem 0;
+        display:flex;
+        justify-content: space-between;
+        .footLinks{
+            width:8rem;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            a{
+            color:$footfont;
+            }
+        }
+        .social {
+            width:10rem;
+            display:flex;
+            justify-content: space-between;
+            img {
+                width:1rem;
+            }
+        }
+    }
+}
+/* Extra small devices (phones, 375px and up) */
+@media only screen and (min-width: 375px) {
+
+} 
+
+@media only screen and (min-width: 425px) {
+    footer {
+        .footTop {
+            p,a {
+                font-size:1.2rem;
+            }
+        }
+    }
+    
+} 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+        .navCont {
+            display:flex !important;
+            width:30rem;
+            justify-content: space-between;
+            align-items: center;
+            a {
+                text-decoration: none;
+            }
+        }
+        .navIcon {
+            display:none;
+        }
+        .navCollapse {
+            display:none;
+        }
+    .hero {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin:8rem auto;
+        .heroContent{
+            margin-top:0;
+            width:40%;
+        }
+        img {
+            display:flex;
+        }
+    }
+  #about {
+    flex-direction: row;
+    .aboutSection{
+        width:50%; 
+    }
+    img {
+        width:40%;
+    }
+  }
+  .features {
+      .featBox {
+          flex-direction:row;
+          p{
+            width:50%;
+          }
+      }
+  }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    h2,p,span {
+        font-size:1.5rem;
+    }
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    section {
+        width:80%;
+    }
+}
